@@ -31,7 +31,7 @@ export default function CatCard({ card, onSwipe, zIndex, isTop }: {
 
       function handleTouchStart(e: PointerEvent) {
          e.preventDefault();
-         
+
          // capture on the card element so moves are tracked even when pointer is over the image
          try {
             el!.setPointerCapture(e.pointerId);
@@ -57,17 +57,17 @@ export default function CatCard({ card, onSwipe, zIndex, isTop }: {
 
       function handleTouchEnd(e: PointerEvent) {
          if (!startTouchPos.current) return; // No starting point means no drag occurred
-         
+
          const finalDistanceX = e.clientX - startTouchPos.current.x; // Total horizontal distance moved
          const SWIPE_THRESHOLD = 120; // Minimum distance in px to consider a swipe
-         
+
          if (Math.abs(finalDistanceX) > SWIPE_THRESHOLD) {
             const direction = finalDistanceX > 0 ? "right" : "left"; // It's a swipe!
-            
+
             // Throw the card off-screen
             setTx(direction === "right" ? window.innerWidth : -window.innerWidth);
             setRot(direction === "right" ? 30 : -30);
-            
+
             // Notify to change index after the animation with a slight delay
             setTimeout(() => onSwipe(direction), 300);
          } else {
@@ -153,17 +153,23 @@ export default function CatCard({ card, onSwipe, zIndex, isTop }: {
                />
 
                {/* --- OVERLAYS --- */}
-               {/* These will now automatically center on the ACTUAL image area */}
+               {/* These will now automatically center on the ACTUAL image area + POP out when swipe */}
                <div
-                  style={{ opacity: tx < 0 ? overlayVisibility : 0 }}
-                  className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center rounded-full w-[clamp(100px,50cqmin,200px)] h-[clamp(100px,50cqmin,200px)] bg-slate-100/90 backdrop-blur-md shadow-2xl transition-all duration-300"
+                  style={{
+                     opacity: tx < 0 ? overlayVisibility : 0,  // Show X icon when swiping left
+                     transform: `translate(-50%, -50%) scale(${0.5 + (overlayVisibility * 0.5)})`  // Slightly grow the icon as it becomes more visible from 0.5x to 1x
+                  }}
+                  className="pointer-events-none absolute left-1/2 top-1/2 flex items-center justify-center rounded-full w-[clamp(100px,50cqmin,200px)] h-[clamp(100px,50cqmin,200px)] bg-slate-100/90 backdrop-blur-md shadow-2xl"
                >
                   <X size={'clamp(50px,20cqw,100px)'} fill="#3f3f46" color="#3f3f46" />
                </div>
 
                <div
-                  style={{ opacity: tx > 0 ? overlayVisibility : 0 }}
-                  className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center rounded-full w-[clamp(100px,50cqmin,200px)] h-[clamp(100px,50cqmin,200px)] bg-red-50/90 backdrop-blur-md shadow-2xl transition-all duration-300"
+                  style={{
+                     opacity: tx > 0 ? overlayVisibility : 0,  // Show Heart icon when swiping right
+                     transform: `translate(-50%, -50%) scale(${0.5 + (overlayVisibility * 0.5)})`  // Slightly grow the icon as it becomes more visible
+                  }}
+                  className="pointer-events-none absolute left-1/2 top-1/2 flex items-center justify-center rounded-full w-[clamp(100px,50cqmin,200px)] h-[clamp(100px,50cqmin,200px)] bg-red-50/90 backdrop-blur-md shadow-2xl"
                >
                   <Heart size={'clamp(50px,20cqw,100px)'} fill="#e11d48" color="#e11d48" />
                </div>
