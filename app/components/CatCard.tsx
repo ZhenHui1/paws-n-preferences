@@ -1,7 +1,7 @@
-/* eslint-disable @next/next/no-img-element */
 "use client";
 import { useEffect, useRef, useState } from "react";
 import { Heart, X } from 'lucide-react';
+import Image from "next/image";
 
 type Card = { id: string; url: string };
 
@@ -136,9 +136,10 @@ export default function CatCard({ card, onSwipe, zIndex, isTop }: {
                   </div>
                )}
 
-               <img
+               <Image
                   src={card.url}
                   alt={`cat-${card.id}`}
+                  width={1000} height={1200} // Provide intrinsic size
                   onLoad={() => setIsImageReady(true)} // Hide skeleton when ready
                   className={`block w-full h-auto min-h-87.5 max-h-[65vh] object-cover transition-opacity duration-500 ${isImageReady ? "opacity-100" : "opacity-0"
                      }`}
@@ -148,7 +149,7 @@ export default function CatCard({ card, onSwipe, zIndex, isTop }: {
                   */
                   style={{ imageRendering: 'auto' }}
                   draggable={false}
-                  onDragStart={(e) => e.preventDefault()}
+                  onDragStart={(e: React.DragEvent) => e.preventDefault()}
                />
 
                {/* --- OVERLAYS --- */}

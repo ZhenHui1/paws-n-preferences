@@ -1,10 +1,9 @@
-/* eslint-disable @next/next/no-img-element */
 "use client";
-
 import { useEffect, useState } from "react";
 import CatCard from "./components/CatCard";
 import { getCats, type Cat } from "@/lib/cat-api";
 import PawBackground from "./components/PawBackground";
+import Image from "next/image";
 
 export default function Home() {
   const [cats, setCats] = useState<Cat[]>([]);  // List of cats to swipe through
@@ -135,7 +134,7 @@ export default function Home() {
                   key={cat.id}
                   className="break-inside-avoid overflow-hidden rounded-lg bg-white shadow-sm border border-neutral-100"
                 >
-                  <img
+                  <Image
                     src={cat.url}
                     alt={`cat-${cat.id}`}
                     className="w-full h-auto block" // h-auto to show full aspect ratio
