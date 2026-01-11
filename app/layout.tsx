@@ -21,7 +21,8 @@ export const metadata: Metadata = {
   title: "Paws & Preferences",
   description: "Swipe through cute cats and find your preferences!",
   icons: {
-    icon: "/paw-print.svg",
+    icon: "/paws-n-preferences/paw-print.svg", 
+    apple: "/paws-n-preferences/paw-print.svg",
   },
 };
 
