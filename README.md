@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🐾 Paws & Preferences
 
-## Getting Started
+<div align="center">
 
-First, run the development server:
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![Framer Motion](https://img.shields.io/badge/Framer_Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+**Finding your purr-fect match, one swipe at a time.**
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+[Explore Live Demo](https://ZhenHui1.github.io/paws-n-preferences/) • [View API Source](https://cataas.com/)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+</div>
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🌟 Overview
 
-To learn more about Next.js, take a look at the following resources:
+**Paws & Preferences** is a mobile-responsive, fun, interactive "Tinder-style" cat swiper. Built with **Next.js**, it leverages the **Cat API** to provide an endless stream of cute candidates. Swipe right to like a cat, or left to the next! The app tracks your favourites and gives you a summary of your "Cat Soulmate" choices at the end.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## ✨ Key Features
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Interactive Gesture Engine:** Custom-built pointer events for smooth dragging, flicking, and swiping on both mobile and desktop.
+- **Dynamic Data Fetching:** Seamless integration with The Cat API for real-time image loading.
+- **Visual Feedback:** Real-time "Like/Nope" overlays and physics-based card rotations.
+- **Animated Experience:** Features a custom CSS-animated "Paw Print" background for deeper immersion.
+- **Responsive Design:** Fully optimized for all screen sizes using Tailwind's utility-first grid and flexbox logic.
 
-## Deploy on Vercel
+## 🛠️ The Tech Stack
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Framework:** Next.js (App Router)
+- **Styling:** Tailwind CSS (Dark/Light mode support)
+- **Icons:** Lucide React
+- **Typography:** Nunito (Google Fonts)
+- **Deployment:** GitHub Actions + GitHub Pages
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🚀 Installation & Setup
+
+To run this project locally, follow these steps:
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/ZhenHui1/paws-n-preferences.git
+      
