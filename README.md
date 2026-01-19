@@ -5,7 +5,7 @@
 ![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
-![Framer Motion](https://img.shields.io/badge/Framer_Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white)
+<!-- ![Framer Motion](https://img.shields.io/badge/Framer_Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white) -->
 
 **Finding your purr-fect match, one swipe at a time.**
 
@@ -22,7 +22,7 @@
 ## ✨ Key Features
 
 - **Interactive Gesture Engine:** Custom-built pointer events for smooth dragging, flicking, and swiping on both mobile and desktop.
-- **Dynamic Data Fetching:** Seamless integration with The Cat API for real-time image loading.
+- **Dynamic Data Fetching:** Seamless integration with CATAAS (Cat as a Service) API for real-time image loading.
 - **Visual Feedback:** Real-time "Like/Nope" overlays and physics-based card rotations.
 - **Animated Experience:** Features a custom CSS-animated "Paw Print" background for deeper immersion.
 - **Responsive Design:** Fully optimized for all screen sizes using Tailwind's utility-first grid and flexbox logic.
